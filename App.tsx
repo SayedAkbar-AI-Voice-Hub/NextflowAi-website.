@@ -29,15 +29,15 @@ import {
 
 // --- Shared Components ---
 
-const CTAButton = ({ className = "", children = "Get Your Free Website Consultation" }) => (
-  <button
-    className={`gradient-bg px-8 py-4 rounded-full font-bold text-white hover:opacity-90 transition-all transform hover:scale-105 glow-purple ${className}`}
-    data-cal-link="sayed-akbar-saadat-pevegt/discovery-call"
-    data-cal-namespace="discovery-call"
-    data-cal-config='{"layout":"month_view"}'
+const CTAButton = ({ className = "", children = "Get Your Free Consultation" }) => (
+  <a
+    href="/opt-in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`inline-block gradient-bg px-8 py-4 rounded-full font-bold text-white hover:opacity-90 transition-all transform hover:scale-105 glow-purple text-center ${className}`}
   >
     {children}
-  </button>
+  </a>
 );
 
 const Logo = ({ onClick }: { onClick?: () => void }) => (
@@ -86,14 +86,14 @@ const Navbar = ({ setView }: { setView: (v: string) => void }) => {
           <a href="#how-it-works" onClick={(e) => { e.preventDefault(); setView('home'); setTimeout(() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' }), 100); }} className="hover:text-white transition-colors">How it Works</a>
           <a href="/opt-in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Contact</a>
         </div>
-        <button
+        <a
+          href="/opt-in"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-white text-black px-6 py-2 rounded-full text-sm font-bold hover:bg-purple-500 hover:text-white transition-all"
-          data-cal-link="sayed-akbar-saadat-pevegt/discovery-call"
-          data-cal-namespace="discovery-call"
-          data-cal-config='{"layout":"month_view"}'
         >
-          Book a Call
-        </button>
+          Free Consultation
+        </a>
       </div>
     </nav>
   );
@@ -187,14 +187,14 @@ const ContactPage = ({ setView }: { setView: (v: string) => void }) => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Fast Track</p>
-                  <button
-                    data-cal-link="sayed-akbar-saadat-pevegt/discovery-call"
-                    data-cal-namespace="discovery-call"
-                    data-cal-config='{"layout":"month_view"}'
-                    className="text-lg font-bold hover:text-purple-400 transition-colors text-left"
+                  <a
+                    href="/opt-in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-bold hover:text-purple-400 transition-colors text-left block"
                   >
-                    Book a Discovery Call
-                  </button>
+                    Get a Free Consultation
+                  </a>
                 </div>
               </div>
             </div>
