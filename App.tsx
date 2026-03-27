@@ -9,7 +9,6 @@ import {
   Zap,
   ShieldCheck,
   Users,
-  Star,
   Clock,
   ChevronDown,
   ChevronUp,
@@ -358,10 +357,6 @@ const Hero = () => (
   <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-purple-900/10 blur-[120px] rounded-full -z-10"></div>
     <div className="container mx-auto px-6 text-center">
-      <div className="flex items-center justify-center gap-1 mb-6">
-        {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-yellow-500 text-yellow-500" />)}
-        <span className="ml-2 text-sm font-medium text-gray-400">Trusted by 500+ Local Businesses</span>
-      </div>
       <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tight max-w-5xl mx-auto leading-tight">
         Websites That Bring You <span className="gradient-text">More Customers.</span>
       </h1>
@@ -638,7 +633,7 @@ export default function App() {
           <section className="py-20 bg-purple-600/10">
             <div className="container mx-auto px-6 text-center">
               <h2 className="text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
-              <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Join hundreds of local businesses who are getting more customers with a professional website. Book your free consultation today.</p>
+              <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Get a professional website that captures leads, books appointments, and grows your business 24/7. Book your free consultation today.</p>
               <CTAButton />
             </div>
           </section>
