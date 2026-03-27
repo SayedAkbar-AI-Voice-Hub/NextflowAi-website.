@@ -517,15 +517,6 @@ const Benefits = () => (
             </div>
           </div>
         </div>
-        <div className="flex-1 relative">
-          <div className="absolute -inset-4 bg-purple-500/20 blur-3xl rounded-full"></div>
-          <div className="relative glass-card p-2 rounded-3xl overflow-hidden shadow-2xl">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Website Dashboard" className="rounded-2xl border border-white/5" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-2xl">
-              <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[18px] border-l-black border-b-[12px] border-b-transparent ml-1"></div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -555,52 +546,6 @@ const Process = () => (
   </section>
 );
 
-const Testimonials = () => (
-  <section className="py-24 bg-[#050505]">
-    <div className="container mx-auto px-6">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold mb-4">What Our Clients Say</h2>
-        <p className="text-gray-400">Real results from real local business owners.</p>
-      </div>
-      <div className="grid md:grid-cols-3 gap-8">
-        {[
-          {
-            name: "Mike Thompson",
-            role: "Thompson HVAC Services",
-            content: "Since getting our AI Voice Hub website, we've doubled our service calls. Customers can book online even when we're out on jobs. Best investment I've made for my business.",
-            image: "https://i.pravatar.cc/150?u=mike"
-          },
-          {
-            name: "Sarah Martinez",
-            role: "Martinez Plumbing Co.",
-            content: "I was hesitant about spending money on a website, but it paid for itself in the first month. We're getting 10-15 new leads every week now.",
-            image: "https://i.pravatar.cc/150?u=sarah2"
-          },
-          {
-            name: "James Wilson",
-            role: "GreenScape Landscaping",
-            content: "The online booking system changed everything. No more back-and-forth phone calls. Customers pick their time slot and we show up. Simple.",
-            image: "https://i.pravatar.cc/150?u=james"
-          }
-        ].map((item, idx) => (
-          <div key={idx} className="glass-card p-8 rounded-3xl border border-white/5">
-            <div className="flex gap-1 mb-6">
-              {[...Array(5)].map((_, i) => <Star key={i} size={16} className="fill-yellow-500 text-yellow-500" />)}
-            </div>
-            <p className="text-gray-300 italic mb-8">"{item.content}"</p>
-            <div className="flex items-center gap-4">
-              <img src={item.image} alt={item.name} className="w-12 h-12 rounded-full border border-purple-500/30" />
-              <div>
-                <h4 className="font-bold">{item.name}</h4>
-                <p className="text-gray-500 text-sm">{item.role}</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
 
 const FAQItem = ({ question, answer }: { question: string, answer: string }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -689,7 +634,6 @@ export default function App() {
           <Solutions />
           <Benefits />
           <Process />
-          <Testimonials />
 
           <section className="py-20 bg-purple-600/10">
             <div className="container mx-auto px-6 text-center">
