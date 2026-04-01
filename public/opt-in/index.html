@@ -236,8 +236,9 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes scaleIn { from { transform: scale(0); } to { transform: scale(1); } }
 
-    .form-footer { text-align: center; margin-top: 20px; font-size: 12px; color: rgba(255, 255, 255, 0.25); }
-    .form-footer svg { display: inline-block; vertical-align: middle; margin-right: 4px; }
+    .form-footer { text-align: center; margin-top: 20px; font-size: 12px; color: rgba(255, 255, 255, 0.35); }
+    .form-footer a { color: #a78bfa; text-decoration: none; }
+    .form-footer a:hover { text-decoration: underline; }
 
     @media (max-width: 540px) {
       .form-card { padding: 28px 20px; }
@@ -278,59 +279,23 @@
           </div>
         </div>
 
-        <div class="field-group">
-          <label>Business Name</label>
-          <input type="text" name="business_name" placeholder="Your Business Name">
-        </div>
-
-        <div class="field-group">
-          <label>Industry</label>
-          <select name="industry">
-            <option value="" disabled selected>Select your industry</option>
-            <option value="real_estate">Real Estate</option>
-            <option value="hvac">HVAC</option>
-            <option value="plumbing">Plumbing</option>
-            <option value="landscaping">Landscaping</option>
-            <option value="roofing">Roofing</option>
-            <option value="dental">Dental</option>
-            <option value="medical">Medical / Healthcare</option>
-            <option value="legal">Legal</option>
-            <option value="auto">Auto Services</option>
-            <option value="restaurant">Restaurant / Food</option>
-            <option value="salon">Salon / Spa</option>
-            <option value="fitness">Fitness / Gym</option>
-            <option value="construction">Construction</option>
-            <option value="cleaning">Cleaning Services</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
         <div class="consent-section">
-          <div class="consent-title">Communication Preferences</div>
           <div class="checkbox-group">
             <label class="checkbox-item">
-              <input type="checkbox" name="consent_sms">
+              <input type="checkbox" name="consent_sms_transactional">
               <span class="checkmark">
                 <svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg>
               </span>
-              <span class="checkbox-label">I agree to receive SMS/text messages from AI Voice Hub INC, including appointment confirmations and reminders, service updates, account notifications, consultation scheduling, onboarding, and follow-up communications. Message frequency varies. Message &amp; data rates may apply. Reply STOP to +1 (214) 888-3171 to opt out. Reply HELP for help. Carriers are not liable for delayed or undelivered messages.</span>
+              <span class="checkbox-label">By checking this box, I consent to receive non-marketing text messages from AI Voice Hub INC about consultation scheduling, appointment reminders, service updates, and follow-up communications. Message frequency varies. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to +1 (214) 888-3171 to opt out. Carriers are not liable for delayed or undelivered messages.</span>
             </label>
             <label class="checkbox-item">
-              <input type="checkbox" name="consent_email">
+              <input type="checkbox" name="consent_sms_marketing">
               <span class="checkmark">
                 <svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg>
               </span>
-              <span class="checkbox-label">I agree to receive email communications including updates, offers, and appointment reminders.</span>
-            </label>
-            <label class="checkbox-item">
-              <input type="checkbox" name="consent_voice">
-              <span class="checkmark">
-                <svg viewBox="0 0 12 12" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-5"/></svg>
-              </span>
-              <span class="checkbox-label">I agree to receive AI-powered voice calls for consultation scheduling and follow-up. Calls may be recorded. I will be notified at the start of any interaction when speaking with an AI agent and may request a human representative at any time.</span>
+              <span class="checkbox-label">By checking this box, I consent to receive marketing and promotional messages from AI Voice Hub INC at the phone number provided. Frequency may vary. Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.</span>
             </label>
           </div>
-          <p class="legal-text">By submitting this form, you agree to our <a href="/privacy-policy" target="_blank">Privacy Policy</a> and <a href="/terms-and-conditions" target="_blank">Terms and Conditions</a>. Consent is not a condition of purchase. You can opt out at any time by replying STOP to any SMS or clicking unsubscribe in any email.</p>
         </div>
 
         <button type="submit" class="submit-btn" id="submitBtn">Get My Free Consultation &rarr;</button>
@@ -347,8 +312,7 @@
     </div>
 
     <div class="form-footer">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-      Your information is secure and will never be sold.
+      <a href="/privacy-policy" target="_blank">Privacy Policy</a> | <a href="/terms-and-conditions" target="_blank">Terms &amp; Conditions</a>
     </div>
   </div>
 
@@ -381,9 +345,8 @@
       var data = Object.fromEntries(formData.entries());
 
       // Add checkbox values
-      data.consent_sms = form.consent_sms.checked;
-      data.consent_email = form.consent_email.checked;
-      data.consent_voice = form.consent_voice.checked;
+      data.consent_sms_transactional = form.consent_sms_transactional.checked;
+      data.consent_sms_marketing = form.consent_sms_marketing.checked;
       data.submitted_at = new Date().toISOString();
 
       // Send to LeadConnector webhook
