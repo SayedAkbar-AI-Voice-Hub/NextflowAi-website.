@@ -41,20 +41,10 @@ const CTAButton = ({ className = "", children = "Get Your Free Consultation" }) 
 
 const Logo = ({ onClick }: { onClick?: () => void }) => (
   <div
-    className="group flex items-center gap-3 cursor-pointer select-none"
+    className="cursor-pointer select-none"
     onClick={onClick}
   >
-    {/* Icon Part: White circle with black diamond */}
-    <div className="relative w-10 h-10 bg-white rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-      {/* Rotation removed as requested */}
-      <div className="w-4 h-4 bg-black rounded-sm transform rotate-45 transition-all duration-300 ease-out group-hover:scale-110"></div>
-    </div>
-
-    {/* Text Part: NEXTFLOW (white) AI (purple) */}
-    <div className="flex items-baseline font-bold tracking-tighter text-2xl uppercase">
-      <span className="text-white">AI Voice</span>
-      <span className="text-[#a855f7] ml-1.5">Hub</span>
-    </div>
+    <img src="/ai-voice-hub-logo.jpeg" alt="AI Voice Hub" className="h-10 w-auto" />
   </div>
 );
 
