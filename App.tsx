@@ -381,6 +381,7 @@ const Hero = () => (
           </div>
         ))}
       </div>
+      <p className="text-gray-600 text-xs mt-6 max-w-2xl mx-auto italic">* Results may vary. Individual outcomes depend on your market, services, and level of engagement with the platform.</p>
     </div>
   </section>
 );
@@ -472,6 +473,7 @@ const Solutions = () => (
           </div>
         ))}
       </div>
+      <p className="text-gray-600 text-xs mt-10 max-w-3xl mx-auto text-center">By submitting any contact form on this website, you agree to receive SMS messages, emails, and calls from AI Voice Hub INC. Message and data rates may apply. Message frequency varies. Reply STOP to opt out of SMS at any time. Consent is not a condition of purchase. View our <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">Privacy Policy</a> and <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">Terms &amp; Conditions</a>.</p>
     </div>
   </section>
 );
@@ -489,7 +491,7 @@ const Benefits = () => (
               </div>
               <div>
                 <h4 className="text-xl font-bold mb-2">Get Found Online</h4>
-                <p className="text-gray-400">97% of customers search online before hiring. Without a website, they'll never find you.</p>
+                <p className="text-gray-400">Studies show the vast majority of consumers search online before hiring a local service provider. Without a website, potential customers will find your competitors instead of you.</p>
               </div>
             </div>
             <div className="flex gap-6">
@@ -569,23 +571,23 @@ const FAQ = () => (
       <div className="space-y-2">
         <FAQItem
           question="How much does a website cost?"
-          answer="We offer affordable packages designed for local service businesses. Book a free consultation and we'll give you an exact quote based on your needs. No hidden fees."
+          answer="Contact us for a free consultation and custom quote based on your business needs."
         />
         <FAQItem
           question="How long does it take to build?"
-          answer="Most websites are ready to launch within 1-2 weeks. We handle everything—design, content, and setup—so you can focus on running your business."
+          answer="Most websites are launched quickly after we gather your business information. We'll give you a timeline during your consultation."
         />
         <FAQItem
           question="Do I need to know anything about technology?"
-          answer="Not at all! We handle all the technical stuff. You just tell us about your business and approve the design. It's that simple."
+          answer="Not at all. We handle everything — design, setup, booking system, and lead forms. You just focus on running your business."
         />
         <FAQItem
           question="Can customers really book appointments online?"
-          answer="Yes! We set up a professional booking system where customers can see your availability and book a time slot that works for both of you. You'll get instant notifications."
+          answer="Yes. Your website includes an integrated online booking system that lets customers schedule appointments directly, 24/7."
         />
         <FAQItem
           question="Will my website work on phones?"
-          answer="Absolutely. All our websites are mobile-friendly. Over 60% of your customers will visit from their phones, so we make sure it looks perfect on every device."
+          answer="Absolutely. Every website we build is 100% mobile-responsive and optimized for all screen sizes."
         />
       </div>
     </div>
@@ -595,15 +597,19 @@ const FAQ = () => (
 const Footer = ({ setView }: { setView: (v: string) => void }) => (
   <footer className="py-12 border-t border-white/5">
     <div className="container mx-auto px-6">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-6">
         <Logo onClick={() => { setView('home'); window.scrollTo({ top: 0, behavior: 'smooth' }); }} />
         <div className="flex flex-wrap justify-center gap-8 text-sm text-gray-500">
           <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy Policy</a>
-          <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms & Conditions</a>
+          <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms &amp; Conditions</a>
           <a href="/opt-in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Get Started</a>
           <a href="/opt-in" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Contact Us</a>
         </div>
-        <p className="text-gray-500 text-sm">© 2026 AI Voice Hub.</p>
+      </div>
+      <div className="border-t border-white/5 pt-6 text-center text-gray-600 text-sm space-y-1">
+        <p>© 2026 AI Voice Hub INC. All rights reserved.</p>
+        <p>1603 Capitol Ave, Suite 413G-1082, Cheyenne, WY 82001</p>
+        <p>Phone: <a href="tel:+12148883171" className="hover:text-gray-400 transition-colors">+1 (214) 888-3171</a> &nbsp;|&nbsp; Email: <a href="mailto:sayedakbar@aivoicehub.site" className="hover:text-gray-400 transition-colors">sayedakbar@aivoicehub.site</a></p>
       </div>
     </div>
   </footer>
@@ -633,8 +639,9 @@ export default function App() {
           <section className="py-20 bg-purple-600/10">
             <div className="container mx-auto px-6 text-center">
               <h2 className="text-4xl font-bold mb-6">Ready to Grow Your Business?</h2>
-              <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Get a professional website that captures leads, books appointments, and grows your business 24/7. Book your free consultation today.</p>
+              <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Get a professional website that captures leads, books appointments, and grows your business 24/7. Book your free consultation today — it's completely free with no obligation.</p>
               <CTAButton />
+              <p className="text-gray-600 text-xs mt-6 max-w-2xl mx-auto italic">Results may vary. AI Voice Hub INC does not guarantee specific lead volume, booking rates, or revenue outcomes. See our <a href="/terms-and-conditions" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-400">Terms &amp; Conditions</a> for full details.</p>
             </div>
           </section>
 
