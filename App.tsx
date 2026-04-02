@@ -44,7 +44,7 @@ const Logo = ({ onClick }: { onClick?: () => void }) => (
     className="cursor-pointer select-none"
     onClick={onClick}
   >
-    <img src="/ai-voice-hub-logo.jpeg" alt="AI Voice Hub" className="h-10 w-auto" />
+    <img src="/ai-voice-hub-logo.jpeg" alt="AI Voice Hub" className="h-16 w-auto" />
   </div>
 );
 
